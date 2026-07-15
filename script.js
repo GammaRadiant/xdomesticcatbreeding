@@ -84,7 +84,7 @@ function generateRandomBaby(motherString, fatherString) {
      babydex[i] = momdex[i][random01()] + daddex[i][random01()];
   }
 
-  return makeXanjeLetters(babydex.join(""));
+  return makeXanjeLetters(babydex.join(" "));
   
 }
   
