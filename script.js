@@ -84,7 +84,7 @@ function generateRandomBaby(motherString, fatherString) {
 }
   
 
-incrementBtn.addEventListener('click', () => {
+generateBtn.addEventListener('click', () => {
     babyGenes.textContent = generateRandomBaby(motherGenes.value, fatherGenes.value);
 });
 
