@@ -76,11 +76,11 @@ function generateRandomBaby(motherString, fatherString) {
   let babydex = new Array(10);
   let defdex = "BB DD OO AA μμ LL WW II CC GG".split(" ").map( str => [...str]);
   for (let i = 0; i < 10; i++){
+     setUnderscoresToDefault(momdex[i], defdex[i]);
+     setUnderscoresToDefault(daddex[i], defdex[i]);
      if (i == 2) {
          setYgene(daddex[i]);
      }
-     setUnderscoresToDefault(momdex[i], defdex[i]);
-     setUnderscoresToDefault(daddex[i], defdex[i]);
      babydex[i] = momdex[i][random01()] + daddex[i][random01()];
   }
 
