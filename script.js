@@ -64,8 +64,8 @@ function makeXanjeLetters(singleString) {
 }
 
 function generateRandomBaby(motherString, fatherString) {
-  let momgenes = makesingleletters(motherString);
-  let dadgenes = makesingleletters(fatherString);
+  let momgenes = makeSingleLetters(motherString);
+  let dadgenes = makeSingleLetters(fatherString);
   let momdex = momgenes.split(" ").map( str => [...str]);
   let daddex = dadgenes.split(" ").map( str => [...str]);
   let babydex = new Array(10);
