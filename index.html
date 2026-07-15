@@ -9,6 +9,62 @@
 <body>
     <div class="counter-container">
         <h1>Cat Genetics</h1>
+        <div class="radio-group">
+        <label>
+            <input type="radio" name="menuToggle" value="nwshort" checked>Solids (common)
+        </label>
+        <label style="margin-left: 15px;">
+            <input type="radio" name="menuToggle" value="nwlong"> Solids (persian)
+        </label>
+        <label>
+            <input type="radio" name="menuToggle" value="lwshort" checked>Low white (common)
+        </label>
+        <label style="margin-left: 15px;">
+            <input type="radio" name="menuToggle" value="lwlong"> Low white (persian)
+        </label>
+        <label>
+            <input type="radio" name="menuToggle" value="hwshort" checked>High white (common)
+        </label>
+        <label style="margin-left: 15px;">
+            <input type="radio" name="menuToggle" value="hwlong"> High white (persian)
+        </label>
+        <label>
+            <input type="radio" name="menuToggle" value="nwpaws" checked>White glove (common)
+        </label>
+        <label style="margin-left: 15px;">
+            <input type="radio" name="menuToggle" value="nwpaws"> White glove (persian)
+        </label>            
+    </div>
+
+    <!-- Dropdown 1: short hair solids -->
+    <div id="nwshortContainer" class="dropdown-container active">
+        <label for="nwshortSelect">Solid Shorthairs:</label><br>
+        <select id="nwshortSelect">
+            <option value="__ __ __ __ __ L_ WW ii C_ G_">White Solid Shorthair</option>
+            <option value="banana">Black Solid Shorthair</option>
+            <option value="orange">Blue Solid Shorthair</option>
+            <option value="banana">Chocolate Solid Shorthair</option>
+            <option value="orange">Lilac Solid Shorthair</option>
+            <option value="banana">Black Solid Shorthair</option>
+            <option value="orange">Orange Shorthair</option>
+            <option value="banana">Black Solid Shorthair</option>
+            <option value="orange">Orange Shorthair</option>
+            <option value="banana">Black Solid Shorthair</option>
+            <option value="orange">Orange Shorthair</option>
+            <option value="banana">Black Solid Shorthair</option>
+            <option value="orange">Orange Shorthair</option>
+        </select>
+    </div>
+
+    <!-- Dropdown 2: Vegetables (Hidden by default) -->
+    <div id="vegetablesContainer" class="dropdown-container">
+        <label for="vegSelect">Choose a Vegetable:</label><br>
+        <select id="vegSelect">
+            <option value="carrot">Carrot</option>
+            <option value="broccoli">Broccoli</option>
+            <option value="spinach">Spinach</option>
+        </select>
+    </div>
         <div id="mother-input">
         <label>Mother:</label><input type="text" name="mother" value="__ __ __ __ __ L_ W_ ii C_ G_" />
         </div>
