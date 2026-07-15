@@ -6,6 +6,7 @@ const babyGenes = document.getElementById('baby-genetics');
 const generateBtn = document.getElementById('generate-btn');
 const resetBtn = document.getElementById('reset-btn');
 
+
 const singles = {
     "Mc" : "μ",
     "Sp" : "ψ",
@@ -26,6 +27,10 @@ const xanjes = {
       "ω" : "ws",
       "α" : "wg"
 };
+
+function setYgene(dadray) {
+    dadray[1] = 'y';
+}
 
 function random01() {
   return Math.floor(Math.random() * 2);
@@ -86,6 +91,7 @@ function generateRandomBaby(motherString, fatherString) {
 
 generateBtn.addEventListener('click', () => {
     babyGenes.textContent = generateRandomBaby(motherGenes.value, fatherGenes.value);
+
 });
 
 resetBtn.addEventListener('click', () => {
