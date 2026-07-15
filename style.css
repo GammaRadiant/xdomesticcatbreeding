@@ -8,6 +8,10 @@ body {
     margin: 0;
 }
 
+input {
+    width: 50%;
+}
+
 .counter-container {
     text-align: center;
     background: white;
