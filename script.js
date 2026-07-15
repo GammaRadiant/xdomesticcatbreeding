@@ -6,7 +6,6 @@ const babyGenes = document.getElementById('baby-genetics');
 const generateBtn = document.getElementById('generate-btn');
 const resetBtn = document.getElementById('reset-btn');
 
-
 const singles = {
     "Mc" : "μ",
     "Sp" : "ψ",
@@ -27,6 +26,72 @@ const xanjes = {
       "ω" : "ws",
       "α" : "wg"
 };
+
+ // Get all radio buttons with the name 'menuToggle'
+        const radios = document.querySelectorAll('input[name="menuToggle"]');
+        
+        // Get the dropdown wrapper containers
+        const nwshortContainer = document.getElementById('solidShorthairContainer');
+        const nwlongContainer = document.getElementById('solidPersianContainer');
+        const lwshortContainer = document.getElementById('nowhiteShorthairContainer');
+        const lwlongContainer = document.getElementById('nowhitePersianContainer');
+        const hwshortContainer = document.getElementById('nowhiteShorthairContainer');
+        const hwlongContainer = document.getElementById('nowhitePersianContainer');
+
+        // Function to handle visibility toggle
+        function toggleDropdowns() {
+            // Find which radio button is currently checked
+            const checkedRadio = document.querySelector('input[name="menuToggle"]:checked').value;
+
+            if (checkedRadio === 'nwshort') {
+                nwshortContainer.classList.add('active');
+                nwlongContainer.classList.remove('active');
+                lwlongContainer.classList.remove('active');
+                lwlongContainer.classList.remove('active');
+                hwlongContainer.classList.remove('active');
+                hwlongContainer.classList.remove('active');             
+            } else if (checkedRadio === 'nwlong') {
+                nwshortContainer.classList.remove('active');
+                nwlongContainer.classList.add('active');
+                lwlongContainer.classList.remove('active');
+                lwlongContainer.classList.remove('active');
+                hwlongContainer.classList.remove('active');
+                hwlongContainer.classList.remove('active');
+             } else if (checkedRadio === 'lwshort') {
+                nwshortContainer.classList.remove('active');
+                nwlongContainer.classList.remove('active');
+                lwlongContainer.classList.add('active');
+                lwlongContainer.classList.remove('active');
+                hwlongContainer.classList.remove('active');
+                hwlongContainer.classList.remove('active');
+              } else if (checkedRadio === 'lwlong') {
+                nwshortContainer.classList.remove('active');
+                nwlongContainer.classList.remove('active');
+                lwlongContainer.classList.remove('active');
+                lwlongContainer.classList.add('active');
+                hwlongContainer.classList.remove('active');
+                hwlongContainer.classList.remove('active');
+            } else if (checkedRadio === 'hwshort') {
+                nwshortContainer.classList.remove('active');
+                nwlongContainer.classList.remove('active');
+                lwlongContainer.classList.remove('active');
+                lwlongContainer.classList.remove('active');
+                hwlongContainer.classList.add('active');
+                hwlongContainer.classList.remove('active');
+             } else if (checkedRadio === 'hwlong') {
+                nwshortContainer.classList.remove('active');
+                nwlongContainer.classList.remove('active');
+                lwlongContainer.classList.remove('active');
+                lwlongContainer.classList.remove('active');
+                hwlongContainer.classList.remove('active');
+                hwlongContainer.classList.add('active');
+            }
+        }
+
+        // Attach a change event listener to every radio button in the group
+        radios.forEach(radio => {
+            radio.addEventListener('change', toggleDropdowns);
+        });
 
 function setYgene(dadray) {
     dadray[1] = 'y';
