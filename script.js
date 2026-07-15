@@ -1,7 +1,7 @@
 let count = 0;
 
 const motherGenes = document.getElementById('mother-input').querySelector('input');
-const motherGenes = document.getElementById('father-input').querySelector('input');
+const fatherGenes = document.getElementById('father-input').querySelector('input');
 const babyGenes = document.getElementById('baby-genetics');
 const generateBtn = document.getElementById('generate-btn');
 const resetBtn = document.getElementById('reset-btn');
