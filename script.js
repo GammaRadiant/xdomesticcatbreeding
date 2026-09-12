@@ -40,6 +40,15 @@ const xanjes = {
         const gwshortContainer = document.getElementById('gwshortContainer');
         const gwlongContainer = document.getElementById('gwlongContainer');
 
+        nwshortContainer.addEventListener("change", handleDropdownChange);
+        nwlongContainer.addEventListener("change", handleDropdownChange);
+        lwshortContainer.addEventListener("change", handleDropdownChange);
+        lwlongContainer.addEventListener("change", handleDropdownChange);
+        hwshortContainer.addEventListener("change", handleDropdownChange);
+        hwlongContainer.addEventListener("change", handleDropdownChange);
+        gwlongContainer.addEventListener("change", handleDropdownChange);
+        gwlongContainer.addEventListener("change", handleDropdownChange);
+
         // handle toggles
         function toggleDropdowns() {
             // radio button currently checked
@@ -206,8 +215,7 @@ resetBtn.addEventListener('click', () => {
     babyGenes.textContent = "__ __ __ __ __ L_ W_ ii C_ G_";
 });
 
-const selectElement = document.getElementById("mySelectId");
-selectElement.addEventListener("change", handleDropdownChange);
+
 
 
 
