@@ -178,7 +178,7 @@ function handleDropdownChange(event) {
     const selectedValue = event.target.value;
     let checkedParent = document.querySelector('input[name="parent"]:checked').value;
     if (checkedParent == "father" ) {
-        let orange = selectedValue(substring(6,7));
+        let orange = selectedValue.substring(6,7);
         if (orange === "oo" || orange === "OO" || orange === "__") {
                let result = selectedValue.substring(0, 6) + "y" + selectedValue.substring(7);
                fatherGenes.value = result;
