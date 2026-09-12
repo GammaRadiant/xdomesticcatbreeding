@@ -177,9 +177,13 @@ function makeXanjeLetters(singleString) {
 function handleDropdownChange(event) {
     const selectedValue = event.target.value;
     let checkedParent = document.querySelector('input[name="parent"]:checked').value;
-    if (checkedParent == "father" )
-          fatherGenes.value = selectedValue;
-        else 
+    if (checkedParent == "father" ) {
+        let orange = selectedValue(substring(6,7));
+        if (orange === "oo" || orange === "OO" || orange === "__") {
+               let result = selectedValue.substring(0, 6) + "y" + selectedValue.substring(7);
+               fatherGenes.value = result;
+        } else fatherGenes.value = selectedValue;
+    } else 
           motherGenes.value = selectedValue;
 }
 
