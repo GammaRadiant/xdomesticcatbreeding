@@ -31,12 +31,12 @@ const xanjes = {
         const radios = document.querySelectorAll('input[name="menuToggle"]');
         
         // Get the dropdown wrapper containers
-        const nwshortContainer = document.getElementById('solidShorthairContainer');
-        const nwlongContainer = document.getElementById('solidPersianContainer');
-        const lwshortContainer = document.getElementById('nowhiteShorthairContainer');
-        const lwlongContainer = document.getElementById('nowhitePersianContainer');
-        const hwshortContainer = document.getElementById('nowhiteShorthairContainer');
-        const hwlongContainer = document.getElementById('nowhitePersianContainer');
+        const nwshortContainer = document.getElementById('nwshortContainer');
+        const nwlongContainer = document.getElementById('nwlongContainer');
+        const lwshortContainer = document.getElementById('lwshortContainer');
+        const lwlongContainer = document.getElementById('lwlongContainer');
+        const hwshortContainer = document.getElementById('hwshortContainer');
+        const hwlongContainer = document.getElementById('hwlongContainer');
 
         // Function to handle visibility toggle
         function toggleDropdowns() {
