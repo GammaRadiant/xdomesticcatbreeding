@@ -46,7 +46,7 @@ const xanjes = {
         lwlongContainer.addEventListener("change", handleDropdownChange);
         hwshortContainer.addEventListener("change", handleDropdownChange);
         hwlongContainer.addEventListener("change", handleDropdownChange);
-        gwlongContainer.addEventListener("change", handleDropdownChange);
+        gwshortContainer.addEventListener("change", handleDropdownChange);
         gwlongContainer.addEventListener("change", handleDropdownChange);
 
         // handle toggles
@@ -57,74 +57,74 @@ const xanjes = {
             if (checkedRadio === 'nwshort') {
                 nwshortContainer.classList.add('active');
                 nwlongContainer.classList.remove('active');
+                lwshortContainer.classList.remove('active');
                 lwlongContainer.classList.remove('active');
-                lwlongContainer.classList.remove('active');
-                hwlongContainer.classList.remove('active');
+                hwshortContainer.classList.remove('active');
                 hwlongContainer.classList.remove('active');    
-                gwlongContainer.classList.remove('active');
+                gwshortContainer.classList.remove('active');
                 gwlongContainer.classList.remove('active');                    
             } else if (checkedRadio === 'nwlong') {
                 nwshortContainer.classList.remove('active');
                 nwlongContainer.classList.add('active');
+                lwshortContainer.classList.remove('active');
                 lwlongContainer.classList.remove('active');
-                lwlongContainer.classList.remove('active');
+                hwshortContainer.classList.remove('active');
                 hwlongContainer.classList.remove('active');
-                hwlongContainer.classList.remove('active');
-                gwlongContainer.classList.remove('active');
+                gwshortContainer.classList.remove('active');
                 gwlongContainer.classList.remove('active');  
              } else if (checkedRadio === 'lwshort') {
                 nwshortContainer.classList.remove('active');
                 nwlongContainer.classList.remove('active');
-                lwlongContainer.classList.add('active');
+                lwshortContainer.classList.add('active');
                 lwlongContainer.classList.remove('active');
+                hwshortContainer.classList.remove('active');
                 hwlongContainer.classList.remove('active');
-                hwlongContainer.classList.remove('active');
-                gwlongContainer.classList.remove('active');
+                gwshortContainer.classList.remove('active');
                 gwlongContainer.classList.remove('active');                  
               } else if (checkedRadio === 'lwlong') {
                 nwshortContainer.classList.remove('active');
                 nwlongContainer.classList.remove('active');
-                lwlongContainer.classList.remove('active');
+                lwshortContainer.classList.remove('active');
                 lwlongContainer.classList.add('active');
+                hwshortContainer.classList.remove('active');
                 hwlongContainer.classList.remove('active');
-                hwlongContainer.classList.remove('active');
-                gwlongContainer.classList.remove('active');
+                gwshortContainer.classList.remove('active');
                 gwlongContainer.classList.remove('active');                  
             } else if (checkedRadio === 'hwshort') {
                 nwshortContainer.classList.remove('active');
                 nwlongContainer.classList.remove('active');
+                lwshortContainer.classList.remove('active');
                 lwlongContainer.classList.remove('active');
-                lwlongContainer.classList.remove('active');
-                hwlongContainer.classList.add('active');
+                hwshortContainer.classList.add('active');
                 hwlongContainer.classList.remove('active');
-                gwlongContainer.classList.remove('active');
+                gwshortContainer.classList.remove('active');
                 gwlongContainer.classList.remove('active');                  
              } else if (checkedRadio === 'hwlong') {
                 nwshortContainer.classList.remove('active');
                 nwlongContainer.classList.remove('active');
+                lwshortContainer.classList.remove('active');
                 lwlongContainer.classList.remove('active');
-                lwlongContainer.classList.remove('active');
-                hwlongContainer.classList.remove('active');
+                hwshortContainer.classList.remove('active');
                 hwlongContainer.classList.add('active');
-                gwlongContainer.classList.remove('active');
+                gwshortContainer.classList.remove('active');
                 gwlongContainer.classList.remove('active');                  
             } else if (checkedRadio === 'gwshort') {
                 nwshortContainer.classList.remove('active');
                 nwlongContainer.classList.remove('active');
+                lwshortContainer.classList.remove('active');
                 lwlongContainer.classList.remove('active');
-                lwlongContainer.classList.remove('active');
+                hwshortContainer.classList.remove('active');
                 hwlongContainer.classList.remove('active');
-                hwlongContainer.classList.remove('active');
-                gwlongContainer.classList.add('active');
+                gwshortContainer.classList.add('active');
                 gwlongContainer.classList.remove('active');                  
              } else if (checkedRadio === 'gwlong') {
                 nwshortContainer.classList.remove('active');
                 nwlongContainer.classList.remove('active');
+                lwshortContainer.classList.remove('active');
                 lwlongContainer.classList.remove('active');
-                lwlongContainer.classList.remove('active');
+                hwshortContainer.classList.remove('active');
                 hwlongContainer.classList.remove('active');
-                hwlongContainer.classList.remove('active');
-                gwlongContainer.classList.remove('active');
+                gwshortContainer.classList.remove('active');
                 gwlongContainer.classList.add('active');                  
             }
         }
