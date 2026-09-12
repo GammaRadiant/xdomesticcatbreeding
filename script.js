@@ -27,21 +27,23 @@ const xanjes = {
       "α" : "wg"
 };
 
- // Get all radio buttons with the name 'menuToggle'
+ // radio buttons with name menuToggle
         const radios = document.querySelectorAll('input[name="menuToggle"]');
         
-        // Get the dropdown wrapper containers
+        // dropdown wrapper containers
         const nwshortContainer = document.getElementById('nwshortContainer');
         const nwlongContainer = document.getElementById('nwlongContainer');
         const lwshortContainer = document.getElementById('lwshortContainer');
         const lwlongContainer = document.getElementById('lwlongContainer');
         const hwshortContainer = document.getElementById('hwshortContainer');
         const hwlongContainer = document.getElementById('hwlongContainer');
+        const gwshortContainer = document.getElementById('gwshortContainer');
+        const gwlongContainer = document.getElementById('gwlongContainer');
 
-        // Function to handle visibility toggle
+        // handle toggles
         function toggleDropdowns() {
-            // Find which radio button is currently checked
-            const checkedRadio = document.querySelector('input[name="menuToggle"]:checked').value;
+            // radio button currently checked
+            let checkedRadio = document.querySelector('input[name="menuToggle"]:checked').value;
 
             if (checkedRadio === 'nwshort') {
                 nwshortContainer.classList.add('active');
@@ -49,7 +51,9 @@ const xanjes = {
                 lwlongContainer.classList.remove('active');
                 lwlongContainer.classList.remove('active');
                 hwlongContainer.classList.remove('active');
-                hwlongContainer.classList.remove('active');             
+                hwlongContainer.classList.remove('active');    
+                gwlongContainer.classList.remove('active');
+                gwlongContainer.classList.remove('active');                    
             } else if (checkedRadio === 'nwlong') {
                 nwshortContainer.classList.remove('active');
                 nwlongContainer.classList.add('active');
@@ -57,6 +61,8 @@ const xanjes = {
                 lwlongContainer.classList.remove('active');
                 hwlongContainer.classList.remove('active');
                 hwlongContainer.classList.remove('active');
+                gwlongContainer.classList.remove('active');
+                gwlongContainer.classList.remove('active');  
              } else if (checkedRadio === 'lwshort') {
                 nwshortContainer.classList.remove('active');
                 nwlongContainer.classList.remove('active');
@@ -64,6 +70,8 @@ const xanjes = {
                 lwlongContainer.classList.remove('active');
                 hwlongContainer.classList.remove('active');
                 hwlongContainer.classList.remove('active');
+                gwlongContainer.classList.remove('active');
+                gwlongContainer.classList.remove('active');                  
               } else if (checkedRadio === 'lwlong') {
                 nwshortContainer.classList.remove('active');
                 nwlongContainer.classList.remove('active');
@@ -71,6 +79,8 @@ const xanjes = {
                 lwlongContainer.classList.add('active');
                 hwlongContainer.classList.remove('active');
                 hwlongContainer.classList.remove('active');
+                gwlongContainer.classList.remove('active');
+                gwlongContainer.classList.remove('active');                  
             } else if (checkedRadio === 'hwshort') {
                 nwshortContainer.classList.remove('active');
                 nwlongContainer.classList.remove('active');
@@ -78,6 +88,8 @@ const xanjes = {
                 lwlongContainer.classList.remove('active');
                 hwlongContainer.classList.add('active');
                 hwlongContainer.classList.remove('active');
+                gwlongContainer.classList.remove('active');
+                gwlongContainer.classList.remove('active');                  
              } else if (checkedRadio === 'hwlong') {
                 nwshortContainer.classList.remove('active');
                 nwlongContainer.classList.remove('active');
@@ -85,6 +97,26 @@ const xanjes = {
                 lwlongContainer.classList.remove('active');
                 hwlongContainer.classList.remove('active');
                 hwlongContainer.classList.add('active');
+                gwlongContainer.classList.remove('active');
+                gwlongContainer.classList.remove('active');                  
+            } else if (checkedRadio === 'gwshort') {
+                nwshortContainer.classList.remove('active');
+                nwlongContainer.classList.remove('active');
+                lwlongContainer.classList.remove('active');
+                lwlongContainer.classList.remove('active');
+                hwlongContainer.classList.remove('active');
+                hwlongContainer.classList.remove('active');
+                gwlongContainer.classList.add('active');
+                gwlongContainer.classList.remove('active');                  
+             } else if (checkedRadio === 'gwlong') {
+                nwshortContainer.classList.remove('active');
+                nwlongContainer.classList.remove('active');
+                lwlongContainer.classList.remove('active');
+                lwlongContainer.classList.remove('active');
+                hwlongContainer.classList.remove('active');
+                hwlongContainer.classList.remove('active');
+                gwlongContainer.classList.remove('active');
+                gwlongContainer.classList.add('active');                  
             }
         }
 
@@ -133,6 +165,15 @@ function makeXanjeLetters(singleString) {
   return mystring;
 }
 
+function handleDropdownChange(event) {
+    const selectedValue = event.target.value;
+    let checkedParent = document.querySelector('input[name="parent"]:checked').value;
+    if (parent == "father" )
+          fatherGenes.value = selectedValue;
+        else 
+          motherGenes.value = selectedValue;
+}
+
 function generateRandomBaby(motherString, fatherString) {
   let momgenes = makeSingleLetters(motherString);
   let dadgenes = makeSingleLetters(fatherString);
@@ -164,3 +205,10 @@ resetBtn.addEventListener('click', () => {
     fatherGenes.value = "__ __ __ __ __ L_ W_ ii C_ G_";
     babyGenes.textContent = "__ __ __ __ __ L_ W_ ii C_ G_";
 });
+
+const selectElement = document.getElementById("mySelectId");
+selectElement.addEventListener("change", handleDropdownChange);
+
+
+
+
